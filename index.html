@@ -11,19 +11,19 @@
     <h1>Legalese Wordsearch WIP</h1>
     <div id="main" role="main">
         <div id="puzzle"></div>
-        <!<ul id="words">
-            <li><button id="add-word">Add word</button></li>
+        <ul  class="hide" id="words">
+            <li class="hide"><button id="add-word">Add word</button></li>
         </ul>
         <fieldset id="controls">
-            <label for="allowed-missing-words">Allowed missing words :
-                <input id="allowed-missing-words" type="number" min="0" max="5" step="1" value="1">
+            <label class="hide" for="allowed-missing-words">Allowed missing words :
+                <input class="hide" id="allowed-missing-words" type="number" min="0" max="5" step="1" value="1">
             </label>
-            <label for="max-grid-growth">
+            <label class="hide" for="max-grid-growth">
                 <input id="max-grid-growth" type="number" min="0" max="5" step="1" value="">
             </label>
-            <label for="extra-letters">Extra letters :
-                <select id="extra-letters">
-                    <option value="random">randomized</option>
+            <label class="hide"for="extra-letters">Extra letters :
+                <select class="hide" id="extra-letters">
+                    <option class="hide" value="random">randomized</option>
                 </select>
             </label>
      
@@ -40,7 +40,7 @@
 
     [
     
-      "affidavit", "misconduct", "disbarment", "datbarment", "enre", "judge",
+      "judge", "misconduct", "disbarment", "expedite", "negligent", "recusal", "overdraft", "stipulations", "affidavit"
     ].map(word => WordFindGame.insertWordBefore($('#add-word').parent(), word));
     $('#secret-word').val('LAETITIA');
 
@@ -77,7 +77,7 @@
     /* Event listeners */
     $('#extra-letters').change((evt) => $('#secret-word').prop('disabled', !evt.target.value.startsWith('secret-word')));
 
-    $('#add-word').click( () => WordFindGame.insertWordBefore($('#add-word').parent()));
+    //$('#add-word').click( () => WordFindGame.insertWordBefore($('#add-word').parent()));
 
     $('#create-grid').click(recreate);
 

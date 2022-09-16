@@ -330,7 +330,7 @@
         wordList = words.slice(0).sort();
 
         // initialize the options
-        var maxWordLength = wordList[0].length;
+        var maxWordLength = wordList[0].length + 3;
         var options = {
           height:           opts.height || maxWordLength,
           width:            opts.width || maxWordLength,
@@ -396,7 +396,8 @@
       newPuzzleLax: function(words, opts) {
         try {
             return this.newPuzzle(words, opts);
-        } catch (e) {
+        } 
+        catch (e) {
             if (!opts.allowedMissingWords) {
                 throw e;
             }

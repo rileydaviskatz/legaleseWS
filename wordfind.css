@@ -35,7 +35,8 @@ h1 {
 */
 #puzzle {
   display: inline-block;
-  border: 1px solid black;
+  border: 10px solid rgb(246,244,243);
+  border-radius: 25px;
   padding: 3vw;
 }
 
@@ -71,17 +72,20 @@ button::-moz-focus-inner {
 
 /* indicates when a square has been selected */
 #puzzle .selected {
+  border-radius: 50px;
   background-color: orange;
 }
 
 /* indicates that the square is part of a word that has been found */ 
 #puzzle .found {
-  background-color: blue;
+  background-color: rgb(143, 161, 115);
+  border-radius: 50px;
   color: white;
 }
 
 #puzzle .solved {
-  background-color: purple;
+  background-color: rgb(211, 23, 23);
+  border-radius: 50px;
   color: white;
 }
 
@@ -94,30 +98,28 @@ button::-moz-focus-inner {
 * Styles for the word list
 */
 #words {
-  display: inline-block;
-  max-width: 30rem;
-  padding: 1em;
+  display: inherit;
   list-style-type: none;
   text-align: left;
 }
 @media only screen and (min-width: 600px) {
-  #words {
-    -moz-column-count: 2;
+  /* #words {
+    -moz-column-count: 1;
     -webkit-column-count: 2;
-    column-count: 2;
-    column-gap: 20px;
-  }
+    column-count: 1;
+    column-gap: 10px;
+  } */
 }
 
 #words li {
-  padding: 3px 0;
-  font: 1em sans-serif;
+  padding: 3px ;
+  font: 20pt sans-serif;
 }
 
 /* indicates that the word has been found */
 .wordFound {
   text-decoration: line-through;
-  color: gray;
+  color: rgb(7, 251, 56);
 }
 
 /**
@@ -145,7 +147,7 @@ input[type="number"] {
 select {
   max-width: 10rem;
 }
-#create-grid, #solve {
+#create-grid {
   display: block;
   margin-top: 1rem;
 }
@@ -155,4 +157,18 @@ select {
 
 #result-message {
   font-size: 1.2em;
+}
+#solve {
+  background-color: rgb(145, 1, 1); /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.hide {
+  display: none;
 }
